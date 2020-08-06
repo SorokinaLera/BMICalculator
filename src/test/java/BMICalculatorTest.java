@@ -6,6 +6,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import java.util.concurrent.TimeUnit;
+
 public class BMICalculatorTest {
 
     WebDriver browser;
@@ -89,7 +91,7 @@ public class BMICalculatorTest {
                 "нет сообщения о том что поле \"Height\"не заполненно");
     }
 
-        @AfterMethod(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     public void closeBrowser() {
         //6. Закрыть браузер
         browser.quit();
